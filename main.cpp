@@ -219,21 +219,25 @@ int sdvig(int a[4][4])
 		{
 		case 'j':
 			down(a);
+			rand_1(a);
 			print(a);
 			cout << endl;
 			break;
 		case 'k':
 			up(a);
 			print(a);
+			rand_1(a);
 			cout << endl;
 			break;
 		case 'h':
 			left_1(a);
+			rand_1(a);
 			print(a);
 			cout << endl;
 			break;
 		case 'l':
 			right_1(a);
+			rand_1(a);
 			print(a);
 			cout << endl;
 			break;
@@ -252,4 +256,4 @@ int main()
 	new_null(matrix);
 	sdvig(matrix);
 	return 0;
-}  
+}
