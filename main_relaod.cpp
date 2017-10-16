@@ -188,8 +188,6 @@ void new_null(int a[4][4])
 			a[i][j] = 0;
 		}
 	}
-	rand_1(a); rand_1(a); rand_1(a);
-	print(a);
 }
 
 bool proverka(int a[4][4])
