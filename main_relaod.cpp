@@ -160,7 +160,9 @@ void left_1(int a[4][4])
 }
 
 #include <iostream>
+#include <iomanip>h
 using namespace std;
+
 void print(int a[4][4])
 {
 	for (int i = 0; i < 4; i++)
@@ -168,11 +170,10 @@ void print(int a[4][4])
 		cout << endl;
 		for (int j = 0; j < 4; j++)
 		{
-			if (a[i][j] == 0) cout << "*" << " "; // пробелы , тк проверял большие числа
+			if (a[i][j] == 0) cout<< setw(4) << "*" ; 
 			else
 			{
-				if (a[i][j] > 10 && j != 0) cout << a[i][j] <<  "  " ; // для чисел больше 10 пробел , для простоты восприятия 
-				else cout << a[i][j]<< " ";
+				 cout << setw(4) << a[i][j] ; 
 			}
 		}
 	}
