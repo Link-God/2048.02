@@ -1,6 +1,6 @@
-// вывод для удобства с пробелами 
 #include"stdafx.h"
 static bool prov_0 = false;
+static bool lose = false;
 void sort_down(int a[4][4])
 {
 	for (int j = 0; j < 4; j++)
@@ -208,13 +208,17 @@ bool proverka(int a[4][4])
 	else return false;
 }
 
+#include <iostream>
+using namespace std;
 int rand_1(int a[4][4])
 {
 	int i, j;
 	i = rand() % 4;
 	j = rand() % 4;
-	if (proverka && prov_0)
+	if (proverka(a) && prov_0)
 	{
+		cout << "lose" << endl;
+		lose = true;
 		system("pause");
 		return -1;
 	}
@@ -245,13 +249,15 @@ int sdvig(int a[4][4])
 		case 'j':
 			down(a);
 			rand_1(a);
-			print(a);
+			print(a) ;
+			if (lose) return -1;
 			cout << endl;
 			break;
 		case 'k':
 			up(a);
 			rand_1(a);
 			print(a);
+			if (lose) return -1;
 			cout << endl;
 			break;
 		case 'h':
@@ -264,6 +270,7 @@ int sdvig(int a[4][4])
 			right_1(a);
 			rand_1(a);
 			print(a);
+			if (lose) return -1;
 			cout << endl;
 			break;
 		case 'q':
