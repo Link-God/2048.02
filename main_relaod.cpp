@@ -262,27 +262,27 @@ int sdvig(int a[4][4])
 		cin >> op;
 		switch (op)
 		{
-		case 's': //j
+		case 'j': 
 			down(a);
 			rand_1(a,hod);
 			print(a) ;
 			if (lose) return -1;
 			cout << endl;
 			break;
-		case 'w': //k
+		case 'k': 
 			up(a);
 			rand_1(a,hod);
 			print(a);
 			if (lose) return -1;
 			cout << endl;
 			break;
-		case 'a'://h
+		case 'h':
 			left_1(a);
 			rand_1(a,hod);
 			print(a);
 			cout << endl;
 			break;
-		case 'd'://l
+		case 'l':
 			right_1(a);
 			rand_1(a,hod);
 			print(a);
